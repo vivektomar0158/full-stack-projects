@@ -38,8 +38,7 @@ A modern full-stack expense tracking application (Spring Boot + React) that supp
 - React Hook Form + Zod
 - Lucide React icons
 - Recharts for visualizations
-
-(Source: project README.) :contentReference[oaicite:4]{index=4}
+{index=4}
 
 ---
 
