@@ -1,84 +1,93 @@
-# Expense Tracker - Pro
+# Expense Tracker — Full Stack
 
-A full-stack, modern expense tracking application built with Spring Boot and React.
+
+<img width="800" height="500" alt="Screenshot 2026-02-05 114642" src="https://github.com/user-attachments/assets/78fe5df2-6330-4ca9-b086-c583dfb4616b" />
+
+
+A modern full-stack expense tracking application (Spring Boot + React) that supports JWT auth, CRUD for expenses, budgets, dashboards and charts.
+
+---
+
+## Demo
+- **Frontend (live):** https://expense-tracker-frontend-l779.onrender.com    
+- **Backend health:** https://expense-tracker-tu4t.onrender.com/actuator/health  
+
+---
 
 ## Features
+- Dashboard: real-time stats, monthly comparisons, spending trends.
+- Expense management: create / read / update / delete transactions with categories and payment methods.
+- Budget tracking by category.
+- JWT authentication (register / login).
+- Visual reports using Recharts.
 
-- **Dashboard**: Real-time stats, monthly comparisons, and spending trends.
-- **Expense Management**: Full CRUD operations for daily transactions with categories and payment methods.
-- **Budget Tracking**: Set and monitor monthly budget limits by category.
-- **Authentication**: Secure JWT-based authentication with registration and login.
-- **Reports**: Visual data representations using Recharts.
+(Source: project README & repo tree.) :contentReference[oaicite:3]{index=3}
 
-## Tech Stack
+---
 
-### Backend
-- **Java 17** with **Spring Boot 3.5.10**
-- **Spring Security** with **JWT**
-- **Spring Data JPA** with **PostgreSQL**
-- **Maven** for build management
-- **JUnit 5** and **Mockito** for testing
+## Tech stack
+**Backend**
+- Java 17, Spring Boot 3.x
+- Spring Security + JWT
+- Spring Data JPA (PostgreSQL)
+- Maven
 
-### Frontend
-- **React 18** with **Vite**
-- **Tailwind CSS** for styling
-- **React Hook Form** with **Zod** (for validation)
-- **Lucide React** for icons
-- **Recharts** for data visualization
-- **Vitest** and **React Testing Library** for unit testing
-- **Playwright** for End-to-End testing
+**Frontend**
+- React 18 (Vite)
+- Tailwind CSS
+- React Hook Form + Zod
+- Lucide React icons
+- Recharts for visualizations
 
-## Getting Started
+(Source: project README.) :contentReference[oaicite:4]{index=4}
+
+---
+
+## Quickstart (local)
 
 ### Prerequisites
 - JDK 17+
 - Node.js 18+
-- PostgreSQL (ensure it's running on port 5432)
+- PostgreSQL running (default port 5432)
 
-### Running the Application
-
-I've provided a convenient batch script to start both servers:
+### 1) Backend
 ```bash
-./run_app.bat
-```
-
-Or manually:
-
-**Backend:**
-```bash
-mvnw.cmd spring-boot:run
-```
-
-**Frontend:**
-```bash
+# from repository root
+./mvnw spring-boot:run          # Linux / mac
+# or
+mvnw.cmd spring-boot:run       # Windows
+2) Frontend
 cd frontend
+npm install
 npm run dev
-```
 
-## Testing
+Tests
 
-### Backend Tests
-```bash
-mvnw.cmd test                  # Unit tests
-mvnw.cmd test -Pintegration    # Integration tests (if configured)
-```
+Backend
 
-### Frontend Tests
-```bash
+./mvnw test
+# Integration (if configured)
+./mvnw -Pintegration test
+
+
+Frontend
+
 cd frontend
-npm run test                   # Unit tests (Vitest)
-npx playwright test            # End-to-End tests
-```
+npm run test        # unit (Vitest)
+npx playwright test  # e2e (Playwright)
 
-## Project Structure
 
-```
+(Source: project README / repo structure.)
+
+Project structure
 expense-tracker/
-├── src/main/java/             # Backend source
-├── src/main/resources/        # Backend resources (application.properties)
-├── frontend/                  # Frontend project
-│   ├── src/                   # React source
-│   ├── e2e/                   # Playwright tests
-│   └── public/                # Static assets
-└── run_app.bat                # Start script
-```
+├─ src/main/java/        # backend source
+├─ src/main/resources/   # backend resources (application.properties)
+├─ frontend/             # React app (Vite)
+│  ├─ src/
+│  ├─ public/
+│  └─ e2e/               # Playwright tests
+└─ run_app.bat
+
+
+(derived from repo tree).
